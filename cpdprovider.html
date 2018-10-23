@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>eduAfric</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/indexcss.css"/>
+
+    <!-- favourite icon -->
+    <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">
+
+    <style>
+        @media only screen and (max-width: 480px) {
+            .side-nav.fixed.side-nav-custom {
+                overflow-y: scroll;
+
+            }
+        }
+
+        @media only screen and (max-width: 988px) {
+            .form-custom {
+                padding-left: 0px !important;
+            }
+        }
+
+        body {
+            background-color: #f7f7f7;
+        }
+
+        #image-upload_link {
+            text-decoration: none;
+        }
+
+        #upload-file {
+            display: none
+        }
+
+        .select-dropdown {
+            border: 1px solid #bdbdbd !important;
+        }
+
+        .select-option {
+            padding-right: 0 !important;
+        }
+
+        .dropdown-content {
+            z-index: 2 !important;
+            overflow-y: auto !important;
+            max-height: 300px !important;
+        }
+
+        .change-image-text {
+            display: none;
+            position: center;
+            color: #ffffff;
+        }
+
+        .image-view:hover {
+            opacity: 0.5;
+        }
+
+        .image-view:hover .change-image-text {
+            display: contents;
+        }
+
+        .upload-image-button {
+            display: none;
+            margin-top: 5px;
+
+        }
+
+        .upload-image-button:hover {
+            background-color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+<div class="navbar-fixed">
+    <!--dropdown1 for nav-bar profile image-->
+    <ul id="dropdown1" class="dropdown-content profile-custom-list">
+        <li><a href="/cpd_provider" class="text-center nav-account-font">Dashboard</a></li>
+        <li class="divider"></li>
+        <li><a href="#!" class="text-center nav-account-font">Logout</a></li>
+    </ul>
+    <nav class="dashboard-nav">
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons black-text">menu</i></a>
+        <div class="nav-wrapper navbar-color">
+            <a href="/" class="brand-logo"><img src=http://www.eduafric.com/./img/logo.png
+                                                class="logo-image-dashboard-top-nav" alt=""></a>
+            <ul class="right hide-on-med-and-down">
+
+                <li><a class="nav-profile-image dropdown-button" href="#!" data-activates="dropdown1"><img
+                        src=http://www.eduafric.com/./img/IPASA-Logo.png class="main-profile-image"><i
+                        class="material-icons right black-text">arrow_drop_down</i></a></li>
+
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="row">
+    <!--Beginning of sidebar-->
+    <div class="col s12 m4 l3">
+        <ul id="slide-out" class="side-nav fixed side-nav-custom">
+            <li>
+                <div class="user-view profile-data-background">
+                    <input id="upload-file" type="file"/>
+                    <a href="#!user" class="image-view">
+                        <p class="change-image-text" id="image-upload-link">click here to change image</p>
+                        <img id="cpd-profile-img" class="circle image-user-view"
+                             src=http://www.eduafric.com/./img/IPASA-Logo.png/>
+                    </a>
+
+                    <a href="#!name"><span class="white-text name name-user-view">IPA</span></a>
+                </div>
+            </li>
+            <li class="no-padding navbar-color">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header collapse-header">Account<i class="material-icons">view_list</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li class="profile-sub-menu"><a href="#">Edit Profile
+                                    <i class="material-icons">edit</i>
+                                </a></li>
+                                <li class="profile-sub-menu"><a href="#">Setting
+                                    <i class="material-icons">settings</i>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="navbar-color">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header collapse-header" href="/cpd_provider/create_course#">Create Course
+                            <i class="material-icons">view_list</i>
+                        </a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li class="profile-sub-menu"><a href="#">Title
+                                    <i class="material-icons">add_circle</i>
+                                </a></li>
+                                <li class="profile-sub-menu"><a href="#">Media
+                                    <i class="material-icons">add_circle</i>
+                                </a></li>
+                                <li class="profile-sub-menu"><a href="#">Fee
+                                    <i class="material-icons">add_circle</i>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="navbar-color"><a class="waves-effect" href="/cpd_provider/course_created">Course Created
+                <i class="material-icons">view_compact</i>
+            </a></li>
+            <li class="navbar-color">
+                <div class="divider"></div>
+            </li>
+            <li class="navbar-color"><a class="waves-effect" href="#!">Logout
+                <i class="material-icons">first_page</i>
+            </a></li>
+        </ul>
+        <!-- <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a> -->
+
+    </div>
+    <!--End of sidebar-->
+
+    <div class="col s12 m8 l9">
+        <!--Main content beginning-->
+
+        <!--Main content beginning-->
+        <div class="col s12 m8 l11">
+            <div class="row course-created-section z-depth-1">
+                <div class="col s12 m12">
+                    <h6 class="header"><i class="material-icons">view_list</i>Course Created</h6>
+                </div>
+
+                <table class="col s12 striped cpd-table-custom cpd-table-font" id="myCourseTable">
+                    <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Course</th>
+                        <th>
+                            <label>Filter Status</label>
+                            <select id="myCourseSelector" class="browser-default filter-publish">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="all">All</option>
+                                <option value="published">Published</option>
+                                <option value="not-published">Not published</option>
+                            </select>
+                        </th>
+                        <th>Report</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr status="published">
+                        <td>1</td>
+                        <td><span>Materials management and logistics (Part I)</span><a
+                                href="/cpd_provider/create_course"><i
+                                id="edit-icon" class="material-icons">edit</i></a></td>
+                        <td>Published</td>
+                        <td><a class="view-report-button bg-green-eduafric btn"
+                               href="/cpd_provider/course_created/report">View</a></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <ul class="pagination">
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                    <li class="active bg-green-eduafric"><a href="#!">1</a></li>
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!--End of main content-->
+    </div>
+</div>
+
+<!-- JavaScript Libraries -->
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+<script src="/js/cpdprovider.js"></script>
+
+</body>
+</html>
